@@ -1,0 +1,54 @@
+Problem domain s. solution domain
+
+So far we learned about the procedural paradigm, the abstract dataype paradigm
+(procedurual and ADT have rather run-time focus),
+and the generic paradigm (has rather compile-time focus) 
+as solution domain techniques.
+Now we will also learn about object-oriented programming (OOP) as solution domain
+technique (and a little about using it as a problem-domain technique). OOP adds
+inheritance and inclusion polymorphism to ADT and has a strong run-time focus.
+
+Problem domain
+What exactly do we want to model?
+Please remember: each model is an abstraction, 
+each abstraction serves a specific purpose.
+
+
+
+Requirements
+
+Customer wants one simple on-board computer for electric (OBCE) and another
+one for combustion cars (OBCC).
+
+OBCE is initialized with maximum battery capacity, efficiency,
+actual battery capacity (0), mileage (0), maximum speed.
+OBCE allows to charge the battery (not exceeding maximum battery capacity).
+Charging is done by telling the amount of kWh.
+On demand OBCE computes the maximum range.
+OBCE allows to drive a certain range and lowers remaining capacity of battery
+accordingly. The actual range is limited by the actual battery capacity. The
+covered distance is added to the mileage.
+For simplicity it is assumed that speed has no influence on power consumption.
+On demand the OBCE tells the mileage.
+The distance unit is Kilometer (k),
+the battery capacity is kiloWatt per hour (kWh),
+the efficiency is Watt hours per Kilometer (Wh/km)
+the speed is Kilometer per hour (km/h).
+See Electric cars:
+https://ev-database.org/cheatsheet/useable-battery-capacity-electric-car for
+infos about batteries in electric cars.
+
+OBCC is initialized with maximum tank capacity, fuel consumption,
+tank level (0), mileage (0), maximum speed.
+OBCC allows to refuel the tank (not exceeding maximum tank capacity).
+On demand OBCC computes the maximum range.
+OBCC allows to drive a certain range and lowers remaining tank level
+accordingly. The actual range is limited by the actual tank level. The
+covered distance is added to the mileage.
+For simplicity it is assumed that speed has no influence on fuel consumption.
+On demand the OBCC tells the mileage.
+The distance unit is Kilometer (k),
+the tank capacity is Liter (l).
+the consumption is liter per 100 km (l/100km)
+the speed is Kilometer per hour (km/h).
+
