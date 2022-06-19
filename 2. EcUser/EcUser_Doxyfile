@@ -1,0 +1,13 @@
+# RationalNumberClassValueSemantics_Doxyfile for Doxygen 1.9.1
+PROJECT_NAME           = EcUser
+OUTPUT_DIRECTORY       = EcUser_doc
+INPUT                  = EcUser.cpp
+GENERATE_LATEX         = NO
+# The next line generates documentation
+# for private members as well.
+EXTRACT_PRIVATE        = YES
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
