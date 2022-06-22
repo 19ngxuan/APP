@@ -89,19 +89,19 @@ int main()
 {
    OBCE obce { 58.0,166.0,160.0 };
    cout << format("Charged {} of {} kWh.\n",obce.charge(29.0),29.0); //this works
-   //cout << format(bc,obce.batteryCapacity());                        //this does not work
-   //cout << format(ch,obce.charge(50.0),50.0);
-   //cout << format(bc,obce.batteryCapacity());
-   //cout << format(rr,obce.remainingRange());
-   //cout << format(dr,obce.drive(175.0),175.0);
-   //cout << format(mi,obce.mileage());
-   //cout << format(bc,obce.batteryCapacity());
-   //cout << format(rr,obce.remainingRange());
-   //cout << format(dr,obce.drive(200.0),200);
-   //cout << format(mi, obce.mileage());
-   //cout << format(bc,obce.batteryCapacity());
+   cout << format(bc,obce.batteryCapacity());                        //this does not work
+   cout << format(ch,obce.charge(50.0),50.0);
+   cout << format(bc,obce.batteryCapacity());
+   cout << format(rr,obce.remainingRange());
+   cout << format(dr,obce.drive(175.0),175.0);
+   cout << format(mi,obce.mileage());
+   cout << format(bc,obce.batteryCapacity());
+   cout << format(rr,obce.remainingRange());
+   cout << format(dr,obce.drive(200.0),200);
+   cout << format(mi, obce.mileage());
+   cout << format(bc,obce.batteryCapacity());
    cout << format("Remaining range is {} km.\n",obce.remainingRange());
-   print("Remaining range is {} km.\n",obce.remainingRange());
+   
 
    return 0;
    
