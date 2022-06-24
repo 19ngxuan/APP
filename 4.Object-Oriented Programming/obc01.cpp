@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string_view>
-#define FMT_HEADER_ONLY
 #include <fmt/format.h>
+#include <fmt/ostream.h>
 using namespace std;
 using fmt::format;
 using fmt::print;
