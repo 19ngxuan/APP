@@ -192,7 +192,7 @@ class OBCC: public OBC<> // turn into template!
              m_tankLevel; //kWh
 };
 
-constexpr string_view
+constexpr std::string_view
    ch { "Charged {} of {} kWh.\n" },
    bc { "Battery capacity is {} kWh.\n" },
    rr { "Remaining range is {} km.\n" },
