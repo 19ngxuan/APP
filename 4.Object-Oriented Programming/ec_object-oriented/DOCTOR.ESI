@@ -1,0 +1,254 @@
+goal is type.disease
+
+legalanswers are yes no *
+
+if rest.temp.over.100 is yes
+then fever is yes
+
+question rest.temp.over.100 is 
+"Has the child been resting for over an hour and his temp is greater than 100?" 
+
+if active.temp.over.101 is yes
+then fever is yes
+
+question active.temp.over.101 is
+"Has the child been active in the last hour and his temp is greater than 101?"
+
+if clear.nasal.discharge is yes
+and scratchy.throat is yes
+then cold is yes
+
+question clear.nasal.discharge is 
+"Does the child have a clear nasal discharge?"
+
+question scratchy.throat is "Does the child have a scratchy throat?"
+
+if cold is yes
+and much.cough is yes
+and squeaky.breath is yes
+and vibration.chest is yes
+and fever is yes
+then type.disease is bronchitis
+
+question much.cough is 
+"Does the child cough a lot, and cough syrup is roughly ineffective?"
+
+question squeaky.breath is
+"Does the child squeake as he breaths?"
+
+question vibration.chest is
+"Can you feel a vibration in the child's chest as he breaths?"
+
+if high.fever is yes
+and rapid.breathing is yes
+and cough is yes
+then type.disease is pneumonia
+
+question high.fever is "Is the child's temperature over 103?"
+
+question rapid.breathing is "Does the child have rapid, shallow breathing?"
+
+question cough is "Does the child have a cough?"
+
+if hoarse.cough is yes
+and difficulty.breathing is yes
+and fever is yes
+and cold is yes
+then type.disease is severe.croup
+       
+if hoarse.cough is yes
+and difficulty.breathing is yes
+then type.disease is croup
+
+question hoarse.cough is "Does the child have a hoarse cough?"
+
+question difficulty.breathing is "Does the child have difficulty breathing?"
+
+if cough.when.move is yes
+and sinus.pain is yes
+then type.disease is sinusitis
+
+question cough.when.move is 
+"Does the child start coughing violently when he either lays down or gets up?"
+
+question sinus.pain is "Does the child have any sinus pain?"
+
+if high.fever is yes
+and headache is yes
+and vomiting is yes
+and tonsils.swollen is yes
+then type.disease is tonsillitis
+
+question headache is "Does the child complain of headache?"
+
+question vomiting is "Is the child vomiting?"
+
+question tonsils.swollen is 
+"Are the child's tonsils swollen with white patches on them?"
+
+if sneeze is yes
+and itchy.nose is yes
+then type.disease is allergy
+
+question sneeze is "Is the child sneezing?"
+
+question itchy.nose is "Does the child complain of an itchy nose?"
+
+if cold is yes
+and wheezing is yes
+then type.disease is asthmatic.bronchitis
+
+question wheezing is "Is the child wheezing?"
+
+if itching is yes
+and hives.rash is yes
+then type.disease is hives
+
+question itching is "Does the child complain of itchy or scratchy skin?"
+
+question hives.rash is 
+"Does the child have raised welts that are white in color?"
+
+if eczema is yes 
+then type.disease is eczema
+
+question eczema is
+"Does the child have patches of rough, red, rash, scaly skin?"
+
+if cold is yes
+and fever is yes
+and measle.rash is yes
+then type.disease is measles
+
+if measle.rash is yes
+then type.disease is german.measles
+
+question measle.rash is
+"Does the child have flat pink spots on the skin?"
+
+if pox.rash is yes
+then type.disease is chicken.pox
+
+question pox.rash is 
+"Does the child's skin have separate, raised pimples, several with blisters?"
+
+if headache is yes
+and fever is yes
+and vomiting is yes
+and sore.throat is yes
+and scarlet.rash is yes
+then type.disease is scarlet.fever
+
+question sore.throat is "Does the child have a sore throat?"
+
+question scarlet.rash is 
+"Does the child have a red blush-like rash on his skin?"
+
+if prickly.rash is yes
+then type.disease is prickly.heat
+
+question prickly.rash is "Does the child have patches of tan-pink pimples?"
+
+if itching is yes
+and scabies.rash is yes
+then type.disease is scabies
+
+question scabies.rash is 
+"Are there groups of pimples topped with scabs on the child?"
+
+if ringworm.rash is yes
+then type.disease is ringworm
+
+question ringworm.rash is 
+"Are there circular patches of rough skin on the child?"
+
+if impetigo.rash is yes
+then type.disease is impetigo
+
+question impetigo.rash is
+"Are there pimples on the child with a partly brown crust?"
+
+if itching is yes
+and ivy.rash is yes
+then type.disease is poison.ivy
+
+question ivy.rash is 
+"Are there clusters of small blisters on reddened shiny skin?"
+
+if cold is yes
+and delayed.cough is yes
+then type.disease is whooping.cough
+
+question delayed.cough is 
+"Did the child start coughing about one week after getting the cold?"
+
+if neck.swelling is yes
+then type.disease is mumps
+
+question neck.swelling is
+"Does the child have extensive swelling in the side of his neck?"
+
+if sore.throat is yes
+and fever is yes
+and dirty.white.patches is yes
+then type.disease is diptheria
+
+question dirty.white.patches is
+"Does the child have dirty white patches on his tonsils?"
+
+if fever is yes
+and headache is yes
+and touch.to.chest is yes
+then type.disease is anterior.poliomyelitis
+
+question touch.to.chest is
+"Is it impossible for the child to touch his chin to his chest?"
+
+if fatigue is yes
+and fever is yes
+and cough is yes
+and sputum is yes
+then type.disease is tuberculosis
+
+question fatigue is "Does the child complain of general fatigue?"
+
+question sputum is "Is the child producing sputum?"
+
+if fever is yes
+and fatigue is yes
+and tender.joints is yes
+then type.disease is rheumatic.fever
+
+question tender.joints is "Does the child complain of tender joints?"
+
+if nervous.disease is yes
+then type.disease is chorea
+
+question nervous.disease is
+"Does the child have twitching or writhing movements in DIFFERENT places?"
+
+if naval.pain is yes
+and tender.abdomen is yes
+then type.disease is appendicitis
+
+question naval.pain is
+"Has the child complained of pain around his naval for several hours?"
+
+question tender.abdomen is
+"Does the child have a tender abdomen on the right side?"
+
+if inflammed.ears is yes
+and fever is yes
+then type.disease is serious.ear.infection
+
+if inflammed.ears is yes
+then type.disease is ear.infection
+
+question inflammed.ears is "Does the child have inflammed ears?"
+
+if high.fever is yes
+then type.disease is roseola
+
+answer is "Based on rudimentary knowledge, I believe the child has 
+" 
+type.disease

@@ -76,7 +76,7 @@ class OBCE
              m_mileage; // km
 };
 
-string
+constexpr fmt::string_view
    ch { "Charged {} of {} kWh.\n" },
    bc { "Battery capacity is {} kWh.\n" },
    rr { "Remaining range is {} km.\n" },

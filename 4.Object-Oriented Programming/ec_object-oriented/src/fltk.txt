@@ -1,0 +1,35 @@
+fltk.pdf, p. 7:
+===============
+To install FLTK switch to the FLTK directory, open a terminal
+and type
+
+make
+
+Afterwards, type
+
+sudo make install
+
+
+fltk.pdf, p. 14:
+================
+To find out, which linker options are required, open a terminal
+and enter the command
+
+fltk-config --ldflags
+
+On my machine the result is
+
+-L/usr/local/lib -lfltk -lpthread -framework Cocoa
+
+Now, running the compiler with
+
+g++ ec_gui.cpp -L/usr/local/lib -lfltk -lpthread -framework Cocoa
+
+produces the desired filte a.out, which can be execute by entering
+
+./a.out
+
+
+In case it is required, you can find information about
+environment variables in macOS on
+https://phoenixnap.com/kb/set-environment-variable-mac

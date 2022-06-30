@@ -1,0 +1,407 @@
+goal is type.animal
+
+legalanswers are yes no *
+
+if backbone is yes
+then superphylum is backbone
+
+if backbone is no
+then superphylum is jellyback
+
+question backbone is "Does your animal have a backbone?"
+
+if superphylum is backbone
+and warm.blooded is yes
+then phylum is warm
+
+if superphylum is backbone
+and warm.blooded is no
+then phylum is cold
+
+question warm.blooded is "Is the animal warm blooded?"
+
+if superphylum is jellyback
+and live.prime.in.soil is yes
+then phylum is soil
+
+if superphylum is jellyback
+and live.prime.in.soil is no
+then phylum is elsewhere
+
+question live.prime.in.soil is "Does your animal live primarily in soil?"
+
+if phylum is warm
+and has.breasts is yes
+then class is breasts
+
+if phylum is warm and has.breasts is no
+then type.animal is bird/penguin
+
+question has.breasts is
+"Normally, does the female of your animal nurse its young with milk?"
+
+if phylum is cold
+and always.in.water is yes
+then class is water
+
+if phylum is cold and always.in.water is no
+then class is dry
+
+question always.in.water is "Is your animal always in water?"
+
+if phylum is soil and flat.bodied is yes then type.animal is flatworm
+
+if phylum is soil and flat.bodied is no then type.animal is worm/leech
+
+question flat.bodied is "Does your animal have a flat body?"
+
+if phylum is elsewhere and body.in.segments is yes then class is segments
+
+if phylum is elsewhere and body.in.segments is no then class is unified
+
+question body.in.segments is "Is the animals body in segments?"
+
+if class is breasts and
+can.eat.meat is yes
+then order is meat
+
+if class is breasts and
+can.eat.meat is no then
+order is vegy
+
+question can.eat.meat is "Does your animal eat red meat?"
+
+if class is water
+and boney is yes
+then type.animal is fish
+
+if class is water
+and boney is no
+then type.animal is shark/ray
+
+question boney is "Does your animal have a boney skeleton?"
+
+if class is dry
+and scally is yes
+then order is scales
+
+if class is dry
+and scally is no
+then order is soft
+
+question scally is "Is your animal covered with scaled skin?"
+
+if class is segments
+and shell is yes
+then order is shell
+
+if class is segments
+and shell is no
+then type.animal is centiped/milliped/insect
+
+question shell is "Does your animal have a shell?"
+
+if class is unified
+and digest.cells is yes
+then order is cells
+
+if class is unified and digest.cells is no
+then order is stomach
+
+question digest.cells is
+"Does your animal use many cells to digest it's food instead of a stomach?"
+
+if order is meat
+and fly is yes
+then type.animal is bat
+
+if order is meat
+and fly is no
+then family is nowings
+
+question fly is "Can your animal fly?"
+
+if order is vegy
+and hooves is yes
+then family is hooves
+
+if order is vegy and hooves is no then family is feet
+
+question hooves is "Does your animal have hooves?"
+
+if order is scales
+and rounded.shell is yes
+then type.animal is turtle
+
+if order is scales
+and rounded.shell is no
+then family is noshell
+
+question rounded.shell is "Does the animal have a rounded shell?"
+
+if order is soft
+and jump is yes
+then type.animal is frog
+
+if order is soft
+and jump is no
+then type.animal is salamander
+
+question jump is "Does your animal jump?"
+
+if order is shell
+and tail is yes
+then type.animal is lobster
+
+if order is shell
+and tail is no
+then type.animal is crab
+
+question tail is "Does your animal have a tail?"
+
+if order is cells
+and stationary is yes
+then family is stationary
+
+if order is cells
+and stationary is no
+then type.animal is jellyfish
+
+question stationary is "Is your animal attached permanently to an object?"
+
+if order is stomach
+and multicelled is yes
+then family is multicelled
+
+if order is stomach and multicelled is no
+then type.animal is protozoa
+
+question multicelled is "Is your animal made up of more than one cell?"
+
+if family is nowings
+and opposing.thumb is yes
+then genus is thumb
+
+if family is nowings
+and opposing.thumb is no
+then genus is nothumb
+
+question opposing.thumb is "Does your animal have an opposing thumb?"
+
+if family is hooves
+and two.toes is yes
+then genus is twotoes
+
+if family is hooves and two.toes is no then genus is onetoe
+
+question two.toes is "Does your animal stand on two toes/hooves per foot?"
+
+if family is feet
+and live.in.water is yes
+then genus is water
+
+if family is feet
+and live.in.water is no
+then genus is dry
+
+question live.in.water is "Does your animal live in water?"
+
+if family is noshell
+and limbs is yes
+then type.animal is crocodile/alligator
+
+if family is noshell
+and limbs is no
+then type.animal is snake
+
+question limbs is "Does your animal have limbs?"
+
+if family is stationary and spikes is yes
+then type.animal is sea.anemone
+
+if family is stationary and spikes is no
+then type.animal is coral/sponge
+
+question spikes is
+"Does your animal normally have spikes radiating from it's body?"
+
+if family is multicelled
+and spiral.shell is yes
+then type.animal is snail
+
+if family is multicelled
+and spiral.shell is no
+then genus is noshell
+
+question spiral.shell is "Does your animal have a spiral-shaped shell?"
+
+if genus is thumb
+and prehensile.tail is yes
+then type.animal is monkey
+
+if genus is thumb
+and prehensile.tail is no
+then species is notail
+
+question prehensile.tail is "Does your animal have a prehensile tail?"
+
+if genus is nothumb
+and over.400 is yes
+then species is 400
+
+if genus is nothumb
+and over.400 is no
+then species is under400
+
+question over.400 is "Does an adult normally weigh over 400 pounds?"
+
+if genus is twotoes
+and horns is yes
+then species is horns
+
+if genus is twotoes
+and horns is no
+then species is nohorns
+
+question horns is "Does your animal have horns?"
+
+if genus is onetoe
+and plating is yes
+then type.animal is rhinoceros
+
+if genus is onetoe
+and plating is no
+then type.animal is horse/zebra
+
+question plating is "Is your animal covered with a protective plating?"
+
+if genus is water
+and hunted is yes
+then type.animal is whale
+
+if genus is water
+and hunted is no
+then type.animal is dolphin/porpoise
+
+question hunted is "Is your animal, unfortunately, commercially hunted?"
+
+if genus is dry
+and front.teeth is yes
+then species is teeth
+
+if genus is dry
+and front.teeth is no
+then species is noteeth
+
+question front.teeth is "Does your animal have large front teeth?"
+
+if genus is noshell
+and bivalve is yes
+then type.animal is clam/oyster
+
+if genus is noshell
+and bivalve is no
+then type.animal is squid/octopus
+
+question bivalve is "Is your animal protected by two half-shells?"
+
+if species is notail
+and nearly.hairless is yes
+then type.animal is man
+
+if species is notail
+and nearly.hairless is no
+then subspecies is hair
+
+question nearly.hairless is "Is your animal nearly hairless?"
+
+if species is 400
+and land.based is yes
+then type.animal is bear/tiger/lion
+
+if species is 400 and land.based is no
+then type.animal is walrus
+
+question land.based is "Is your animal land based?"
+
+if species is under400
+and thintail is yes
+then type.animal is cat
+
+if species is under400
+and thintail is no
+then type.animal is coyote/wolf/fox/dog
+
+question thintail is "Does your animal have a thin tail?"
+
+if species is horns
+and one.horn is yes
+then type.animal is hippopotamus
+
+if species is horns
+and one.horn is no
+then subspecies is nohorn
+
+question one.horn is "Does your animal have one horn?"
+
+if species is nohorns
+and lives.in.desert is yes
+then type.animal is camel
+
+if species is nohorns
+and lives.in.desert is no
+then type.animal is giraffe
+
+question lives.in.desert is "Does your animal normally live in the desert?"
+
+if species is teeth
+and large.ears is yes
+then type.animal is rabbit
+
+if species is teeth
+and large.ears is no
+then type.animal is rat/mouse/squirrel/beaver/porcupine
+
+question large.ears is "Does your animal have large ears?"
+
+if species is noteeth
+and pouch is yes then type.animal is kangaroo/koala.bear
+
+if species is noteeth
+and pouch is no then type.animal is mole/shrew/elephant
+
+question pouch is "Does your animal have a pouch?"
+
+if subspecies is hair
+and long.powerful.arms is yes
+then type.animal is orangutan/gorilla/chimpanzie
+
+if subspecies is hair
+and long.powerful.arms is no
+then type.animal is baboon
+
+question long.powerful.arms is "Does your animal have long, powerful arms?"
+
+if subspecies is nohorn
+and fleece is yes
+then type.animal is sheep/goat
+
+if subspecies is nohorn
+and fleece is no
+then subsubspecies is nofleece
+
+question fleece is "Does your animal have fleece?"
+
+if subsubspecies is nofleece
+and domesticated is yes
+then type.animal is cow
+
+if subsubspecies is nofleece
+and domesticated is no
+then type.animal is deer/moose/antelope
+
+question domesticated is "Is your animal domesticated?"
+
+answer is "I think your animal is a " type.animal
+
+

@@ -21,7 +21,7 @@ class OBC
          return m_mileage;
       }
       virtual double remainingRange() const = 0;
-      virtual double drive(double distance) = 0;// returns distance not covereda
+      virtual double drive(double distance) = 0;// returns distance not covered
       virtual ~OBC() // A base class MUST have a virtual destructor
       {
          cout << "OBC::~OBC" << endl;

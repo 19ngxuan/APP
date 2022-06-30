@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="0.9">
+    <dict>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+
+	<key>CFBundleExecutable</key>
+	<string>ecGui</string>
+
+	<key>CFBundleIdentifier</key>
+	<string>org.fltk.ecGui</string>
+
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+
+	<key>NSHumanReadableCopyright</key>
+	<string>Author: Ulrich W. Eisenecker</string>
+
+	<key>CFAppleHelpAnchor</key>
+	<string>help</string>
+
+	<key>CFBundleName</key>
+	<string>EC_GUI</string>
+
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+
+	<key>CFBundleSignature</key>
+	<string>ECGUI</string>
+
+	<key>CFBundleIconFile</key>
+	<string>icons.icns</string>
+
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+
+	<key>CFBundleGetInfoString</key>
+	<string>Author: Ulrich W. Eisenecker</string>
+
+	<key>NSHighResolutionCapable</key>
+	<true/>
+
+    </dict>
+</plist>

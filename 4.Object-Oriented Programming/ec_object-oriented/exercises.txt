@@ -1,0 +1,56 @@
+1) Forbid empty texts
+Create a knowledge base with questions, answer or goal that use an empty quoted
+string,i.e. "". Obviously, this is not desirable. Therefore, you should detect
+empty texts and report them as an aerror.
+a) Where would you fix this problem?
+b) Implement a fix.
+c) Test ithe fix against corresponding test cases.
+
+2) Forbid keywords as variable/value
+Create a knowledge base with uses keywords as variables or values, i.e.
+"LEGALANSWERS IS LEGALANSWERS IS *". Obviously, this is not desirable.
+Therefore, you shoud detect improper use of keywords and prevent it.
+a) Where would you fix this problem?
+b) Implement a fix.
+c) Test the fix against corresponding test cases.
+
+3) Rules accept empty strings as parameters. Obviously, this is not desirable.
+Therefore, you should detect empty strings and provide adequate treatment for
+this problem.
+a) The place, where to fix this problem is pretty obvious. But which mechanism
+seems most appropriate to provide adequate treamtnet?
+b) Implement the necessary fixes.
+c) Test the fixes against corresponding test cases.
+
+4) Sanity checks
+Despite all error checking so far, there are still many errors, which are not
+detected. For example, there is no If rule that sets the Goal variable, the
+Answer variable may be different from the Goal variable (which should cause at
+least a warning), there may be duplicated If and question rules, Conditions and
+conclusions of If rules may use values which are not defined as Legal Answers
+values and so on.
+Think about more possible errors.
+a) Create a comprehensive list of possible errors.
+b) Where would you check for each of this errors and how will you treat it?
+c) Inplement all necessary fixes.
+d) Implement all necessary test cases.
+e) Run the test cases.
+
+5) Add comments
+Currently, a knowledge bases include rules only. A possibility for including 
+comments as well is to be added. A comment shallt start with # (this should be 
+configurable) and extend until a line break. Counting characters must be 
+suspended while processing a comment.
+
+6) Add pretty pretting
+After a knowledge hase has been loaded it must be possible to export it in 
+a pretty-printed format. The order of the rules in the pretty-printed format
+must be preserved!
+a) Goal rule is completely in one line.
+b) Answer rule has three lines (anwser is, text, variable).
+c) Question rule has two lines (question variable, is text)
+d) Legal answers rule is completely in one linee
+e) If rules has individual lines for if 1st condition, each and condition, then
+conclusion
+If comments have been already added, they must be preserved in the
+pretty-printed knowledge base at their relative position.

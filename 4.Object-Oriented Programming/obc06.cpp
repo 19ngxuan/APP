@@ -142,7 +142,7 @@ class OBCC: public OBC
              m_tankLevel; //kWh
 };
 
-constexpr string_view
+constexpr fmt::string_view
    ch { "Charged {} of {} kWh.\n" },
    bc { "Battery capacity is {} kWh.\n" },
    rr { "Remaining range is {} km.\n" },
@@ -188,7 +188,7 @@ int main()
    cout << obcc.remainingRange() << endl;
 
    // OBC obc(99.0); // illegal, because OBC ist abstract
-   testOBC(obce);
+   testOBC(obce); 
    testOBC(obcc);
 
    testOBC(&obce);

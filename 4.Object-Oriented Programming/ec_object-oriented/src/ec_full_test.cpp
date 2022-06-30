@@ -1,0 +1,9 @@
+#define CATCH_CONFIG_MAIN
+#include <catch2/catch.hpp>
+#include "ec_helper_test.cpp"
+#include "ec_tokenizer_test.cpp"
+#include "ec_rules_test.cpp"
+#include "ec_knowledgebase_test.cpp"
+#include "ec_parser_test.cpp"
+#include "ec_inferenceengine_test.cpp"
+#include "ec_console_test.cpp"

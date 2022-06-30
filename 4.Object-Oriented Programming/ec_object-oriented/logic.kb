@@ -1,0 +1,35 @@
+LEGALANSWERS ARE false true *
+
+GOAL IS logical.operator
+
+ANSWER IS "The logical operator is " logical.operator
+
+QUESTION true.op.true
+IS "What results in true linked to true? "
+
+QUESTION true.op.false
+IS "What results in true linked to false? "
+
+QUESTION false.op.true
+IS "What results in false linked to true? "
+
+QUESTION false.op.false
+IS "What results in false linked to false? "
+
+IF true.op.true IS true
+AND true.op.false IS false
+AND false.op.true IS false
+AND false.op.false IS false
+THEN logical.operator IS logical_and
+
+IF true.op.true IS true
+AND true.op.false IS true
+AND false.op.true IS true
+AND false.op.false IS false
+THEN logical.operator IS logical_or
+
+IF true.op.true IS false
+AND true.op.false IS true
+AND false.op.true IS true
+AND false.op.false IS false
+THEN logical.operator IS logical_xor

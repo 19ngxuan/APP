@@ -7,12 +7,12 @@ using fmt::format;
 class OBC
 {
    public:
-      OBC(double maxSpeed)
+      OBC(double maxSpeed) //Constructor
               : m_maxSpeed(maxSpeed),
                 m_mileage(0.0)
       {
       }
-      [[nodiscard]] const double& maxSpeed() const
+      [[nodiscard]] const double& maxSpeed() const //nodiscard, so the function must be used. The double reference is constant, as well as the member function
       {
          return m_maxSpeed;
       }
@@ -20,7 +20,7 @@ class OBC
       {
          return m_mileage;
       }
-      virtual double remainingRange() const = 0;
+      virtual double remainingRange() const = 0; //virtual double are member functions whose behavior can be overridden in derived classes
       virtual double drive(double distance) = 0;// returns distance not covered
    private:
       double m_maxSpeed, // km/h
@@ -164,7 +164,7 @@ class OBCC
              m_mileage; // km
 };
 
-constexpr string_view
+constexpr fmt::string_view
    ch { "Charged {} of {} kWh.\n" },
    bc { "Battery capacity is {} kWh.\n" },
    rr { "Remaining range is {} km.\n" },
