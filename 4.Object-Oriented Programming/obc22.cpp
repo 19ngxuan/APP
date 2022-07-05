@@ -5,6 +5,10 @@
 #include <fmt/format.h>
 #include <fmt/ostream.h>
 #include <exception>
+<<<<<<< Updated upstream
+=======
+#include <stdexcept>
+>>>>>>> Stashed changes
 using namespace std;
 using fmt::format;
 using fmt::print;
@@ -318,7 +322,13 @@ int main()
     VW_ID3_OBC vwid2_anotherOne { 82.0 , 139.0, 160.0 };
     try
     {
+<<<<<<< Updated upstream
        vwid3.drive(-20.0);
+=======
+       cout << "Before possible exception" << endl;
+       vwid3.drive(-20.0);
+       cout << "After possible exception" << endl;
+>>>>>>> Stashed changes
     } 
     catch (const invalid_argument& ex)
     {

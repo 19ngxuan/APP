@@ -4,6 +4,8 @@
 #include <sstream>
 #include <fmt/format.h>
 #include <fmt/ostream.h>
+#include <exception>
+#include <stdexcept>
 using namespace std;
 using fmt::format;
 using fmt::print;
@@ -11,6 +13,10 @@ using fmt::print;
 // Fully templatized version!
 
 // Added VW_ID3_OBC as final class
+
+// using declaration for constructors
+
+// introducing exceptions
 
 template <typename ValType = double>
 class OBC
@@ -43,6 +49,11 @@ class OBC
    protected:
       void  addMileage(ValueType distance)
       {
+         if (distance < 0.0)
+         {
+            throw invalid_argument("Negative distance in OBC::addMileage()");
+            //throw int(99);
+         }
          m_mileage += distance;
       }
    private:
@@ -207,11 +218,7 @@ class OBCC: public OBC<ValType>
                 m_tankLevel; //kWh
 };
 
-<<<<<<< Updated upstream
-constexpr fmt::string_view
-=======
 constexpr string_view
->>>>>>> Stashed changes
    ch { "Charged {} of {} kWh.\n" },
    bc { "Battery capacity is {} kWh.\n" },
    rr { "Remaining range is {} km.\n" },
@@ -260,6 +267,7 @@ class VW_ID3_OBC final: public OBCE<double>
       {
          cout << "VW_ID3_OBC::VW_ID3_OBC()" << endl;
       }
+      using OBCE::OBCE;
 };
 
 int main()
@@ -308,4 +316,26 @@ int main()
 
     VW_ID3_OBC vwid3;
     testOBC(vwid3);
+    VW_ID3_OBC vwid2_anotherOne { 82.0 , 139.0, 160.0 };
+    bool errorOccured;
+    do
+    {
+       errorOccured = false;
+       cout << "How many km: ";
+       double km;
+       cin >> km;
+       try
+       {
+          cout << "Before possible exception" << endl;
+          vwid3.drive(km);
+          cout << "After possible exception" << endl;
+       } 
+       catch (const invalid_argument& ex)
+       {
+          cout << "Caught invalid_argument exception: " << ex.what() << endl;
+          cout << "Cannot drive negative amount of km: " << km << endl;
+          errorOccured = true;
+       }
+    } 
+    while (errorOccured);
 }
